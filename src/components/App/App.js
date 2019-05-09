@@ -78,10 +78,10 @@ class App extends React.Component {
           <Navbar/>
           <Wrapper>
             <Switch>
-              <Route exact path="/" 
+              <Route exact path={process.env.PUBLIC_URL + '/'} 
               render={() => <Home coins={this.state.coins} convert={this.state.convert} handleConversion={this.handleConversion} coinChange={this.changeCoin}/>} 
               />
-              <Route path="/coinlist" render={() => <CoinList coins={this.state.coins} />} />
+              <Route path={process.env.PUBLIC_URL + '/coinlist'} render={() => <CoinList coins={this.state.coins} />} />
               <Route component={Error} />
             </Switch>
           </Wrapper>
