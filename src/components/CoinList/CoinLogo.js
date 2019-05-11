@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledImg = styled.img`
@@ -15,5 +16,9 @@ class CoinLogo extends React.Component {
         );
     }
 }
+
+CoinLogo.propTypes = {
+    id: PropTypes.string.isRequired
+};
 
 export default CoinLogo;

@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import Select from './Select';
 import Button from './Button';
-import styled from 'styled-components';
 import theme from '../../assets/styles/theme';
 
 const StyledConverter = styled.div`
@@ -103,5 +104,12 @@ class CoinConverter extends React.Component {
     );
   }
 }
+
+CoinConverter.propTypes = {
+  coins: PropTypes.array.isRequired,
+  convert: PropTypes.object.isRequired,
+  coinChange: PropTypes.func.isRequired,
+  handleConversion: PropTypes.func.isRequired
+};
 
 export default CoinConverter;

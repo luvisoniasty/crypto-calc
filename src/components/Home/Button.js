@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from '../../assets/styles/theme';
 
@@ -38,5 +39,9 @@ class Button extends React.Component {
     );
   }
 }
+
+Button.propTypes = {
+  handleClick: PropTypes.func.isRequired
+};
 
 export default Button;

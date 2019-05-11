@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import CoinTable from '../components/CoinList/CoinTable';
 
@@ -24,5 +25,9 @@ class CoinList extends React.Component {
         );
     }
 }
+
+CoinList.propTypes = {
+    coins: PropTypes.array.isRequired
+};
 
 export default CoinList;

@@ -1,6 +1,7 @@
 import React from 'react';
-import Row from './Row';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Row from './Row';
 import theme from '../../assets/styles/theme';
 
 const DataTable = styled.div`
@@ -43,4 +44,10 @@ class CoinTable extends React.Component {
     );
   }
 }
+
+CoinTable.propTypes = {
+  headings: PropTypes.array.isRequired,
+  coins: PropTypes.array.isRequired
+};
+
 export default CoinTable;

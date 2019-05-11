@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Cell from './Cell';
 
 class Row extends React.Component {
@@ -7,7 +8,7 @@ class Row extends React.Component {
         if(header) {  
             return (
                 <tr>
-                    {content.map((inCell) => (inCell === 'Name') ? <Cell key={inCell} header={header} fixed='true' content={inCell} /> : <Cell key={inCell} header={header} content={inCell} />)}
+                    {content.map((inCell) => (inCell === 'Name') ? <Cell key={inCell} header={header} fixed={true} content={inCell} /> : <Cell key={inCell} header={header} content={inCell} />)}
                 </tr>
             );
         } else {
@@ -22,13 +23,21 @@ class Row extends React.Component {
             return (
                 <tr>
                     {rowContent.map((inCell,index) => (inCell === content.name) ?
-                    <Cell key={`${content.id}-${inCell}-${index}`} image={content.id} fixed='true' content={inCell} />
-                    : (typeof inCell == 'number') ? <Cell key={`${content.id}-${inCell}-${index}`} checkSign='true' content={inCell} /> 
+                    <Cell key={`${content.id}-${inCell}-${index}`} image={content.id} fixed={true} content={inCell} />
+                    : (typeof inCell == 'number') ? <Cell key={`${content.id}-${inCell}-${index}`} checkSign={true} content={inCell} /> 
                     : <Cell key={`${content.id}-${inCell}-${index}`} content={inCell} />)}
                 </tr>
             )
         }
     }
 }
+
+Row.propTypes = {
+    header: PropTypes.bool,
+    content: PropTypes.oneOfType([
+                PropTypes.array,
+                PropTypes.object
+            ]).isRequired
+};
 
 export default Row;

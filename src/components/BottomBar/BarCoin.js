@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from '../../assets/styles/theme';
 import CoinLogo from '../CoinList/CoinLogo';
@@ -24,5 +25,9 @@ class BarCoin extends React.Component {
         )
     }
 }
+
+BarCoin.propTypes = {
+    coin: PropTypes.object.isRequired
+};
 
 export default BarCoin;

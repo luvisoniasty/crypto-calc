@@ -1,7 +1,8 @@
 import React from 'react';
-import CoinLogo from './CoinLogo';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from '../../assets/styles/theme';
+import CoinLogo from './CoinLogo';
 
 const normalCell = () => `
     color: ${theme.darkblue};
@@ -77,5 +78,16 @@ class Cell extends React.Component {
         );
     }
 }
+
+Cell.propTypes = {
+    header: PropTypes.bool,
+    fixed: PropTypes.bool,
+    content: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.number
+             ]).isRequired,
+    image: PropTypes.string,
+    checkSign: PropTypes.bool
+};
 
 export default Cell;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import PropTypes from 'prop-types';
 import CoinConverter from '../components/Home/CoinConverter';
 
 class Home extends React.Component {
@@ -16,5 +17,12 @@ class Home extends React.Component {
     );
   }
 }
+
+Home.propTypes = {
+  coins: PropTypes.array.isRequired,
+  convert: PropTypes.object.isRequired,
+  coinChange: PropTypes.func.isRequired,
+  handleConversion: PropTypes.func.isRequired
+};
 
 export default Home;
