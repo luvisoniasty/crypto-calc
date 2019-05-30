@@ -10,13 +10,15 @@ const Bar = styled.div`
     bottom: 0;
     height: 40px;
     background: ${props => (props.path === '/') ? theme.transparentDarkblue : theme.darkblue};
+    width: 100%;
+    overflow: hidden;
 `;
 
 const AllCoins = styled.div`
     height: 100%;
     display: flex;
     flex-direction: row;
-    animation: coins 120s linear infinite;
+    animation: coins 5s linear infinite;
 
     @keyframes coins {
         0% {
@@ -25,6 +27,14 @@ const AllCoins = styled.div`
         100% {
         transform: translateX(-83%);
         }
+    }
+
+    @media (min-width: 1024px) {
+        animation: coins 20s linear infinite;
+    }
+
+    @media (min-width: 1600px) {
+        animation: coins 30s linear infinite;
     }
 `;
 
