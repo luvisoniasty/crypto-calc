@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/crypto-calc/static/js/main.771b95cf.chunk.js",
-    "main.js.map": "/crypto-calc/static/js/main.771b95cf.chunk.js.map",
+    "main.js": "/crypto-calc/static/js/main.5318135a.chunk.js",
+    "main.js.map": "/crypto-calc/static/js/main.5318135a.chunk.js.map",
     "runtime~main.js": "/crypto-calc/static/js/runtime~main.fee3e68f.js",
     "runtime~main.js.map": "/crypto-calc/static/js/runtime~main.fee3e68f.js.map",
     "static/js/2.4827c0d9.chunk.js": "/crypto-calc/static/js/2.4827c0d9.chunk.js",
     "static/js/2.4827c0d9.chunk.js.map": "/crypto-calc/static/js/2.4827c0d9.chunk.js.map",
     "index.html": "/crypto-calc/index.html",
-    "precache-manifest.4fbd9c4594a018172df0445c30dd10e5.js": "/crypto-calc/precache-manifest.4fbd9c4594a018172df0445c30dd10e5.js",
+    "precache-manifest.3eb3a8d57eba4b5d17c4424f88566cfd.js": "/crypto-calc/precache-manifest.3eb3a8d57eba4b5d17c4424f88566cfd.js",
     "service-worker.js": "/crypto-calc/service-worker.js",
     "static/media/background.webp": "/crypto-calc/static/media/background.93363dd2.webp"
   }
