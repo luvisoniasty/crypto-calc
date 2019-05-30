@@ -11,11 +11,21 @@ import BottomBar from '../BottomBar/BottomBar';
 
 const Wrapper = styled.div`
     padding: 0 15px;
+    width: 100%;
     @media (min-width: 1024px) {
       margin: 0 auto;
       max-width: 1024px;
     }
 `;
+
+const Container = styled.div`
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+`;
+
 
 class App extends React.Component {
   state = {
@@ -80,17 +90,19 @@ class App extends React.Component {
       <>
         <GlobalStyle />
         <BrowserRouter basename={process.env.PUBLIC_URL}>
-          <Navbar/>
-          <Wrapper>
-            <Switch>
-              <Route exact path="/" 
-              render={() => <Home coins={this.state.coins} convert={this.state.convert} handleConversion={this.handleConversion} coinChange={this.changeCoin}/>} 
-              />
-              <Route path="/coinlist" render={() => <CoinList coins={this.state.coins} />} />
-              <Route component={Error} />
-            </Switch>
-          </Wrapper>
-          <BottomBar coins={this.state.coins} />
+          <Container>
+            <Navbar/>
+            <Wrapper>
+              <Switch>
+                <Route exact path="/" 
+                render={() => <Home coins={this.state.coins} convert={this.state.convert} handleConversion={this.handleConversion} coinChange={this.changeCoin}/>} 
+                />
+                <Route path="/coinlist" render={() => <CoinList coins={this.state.coins} />} />
+                <Route component={Error} />
+              </Switch>
+            </Wrapper>
+            <BottomBar coins={this.state.coins} />
+          </Container>
         </BrowserRouter>
       </>
     );

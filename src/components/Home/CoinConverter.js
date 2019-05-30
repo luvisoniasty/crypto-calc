@@ -8,18 +8,14 @@ import theme from '../../assets/styles/theme';
 const StyledConverter = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 700px;
+  margin-bottom: 100px;
   padding: 10px 15px;
   background: ${theme.white};
   border-radius: 5px;
-  max-width: 700px;
-  margin: 0 auto;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: height 2s ease;
   @media (min-width: 1024px) {
     padding: 20px 30px;
+    margin-top: 20%;
   }
 `;
 
