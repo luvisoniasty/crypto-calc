@@ -6,7 +6,7 @@ import theme from '../../assets/styles/theme';
 import BarCoin from './BarCoin';
 
 const Bar = styled.div`
-    position: fixed;
+    position: ${props => (props.path === '/') ? 'absolute' : 'fixed'};
     bottom: 0;
     height: 40px;
     background: ${props => (props.path === '/') ? theme.transparentDarkblue : theme.darkblue};

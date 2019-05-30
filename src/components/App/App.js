@@ -45,6 +45,9 @@ class App extends React.Component {
     this.setState({convert: {...this.state.convert, amount: amount}});
 
     coinPaprika.getConvertedPrice(firstCoin, secondCoin, amount).then(res => {
+      if(res.data.quote_currency_id === 'usd-us-dollars' || res.data.quote_currency_id === 'pln-polish-zloty')
+      res.data.price =  parseFloat(Math.round(res.data.price * Math.pow(10, 2)) / Math.pow(10, 2)).toFixed(2);
+
       this.setState({convert: {...this.state.convert, data: res.data}});
     });
   }
@@ -55,7 +58,9 @@ class App extends React.Component {
       this.setState({coins});
     });
 
-    this.doConversion();
+    if(Object.keys(this.state.convert.data).length !== 0) {
+      this.doConversion();
+    }
   }
 
   componentDidMount() {

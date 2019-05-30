@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     background: ${theme.darkblue};
     background-image: url(${backgroundImage}), linear-gradient(${theme.darkblue},${theme.darkblue});
     background-blend-mode: luminosity;
+    overflow-x: hidden;
   }
 `;
 
