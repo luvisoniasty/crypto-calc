@@ -9,7 +9,7 @@ const StyledConverter = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 700px;
-  margin: 50px 0 80px 0;
+  margin: 50px 0 70px 0;
   padding: 10px 15px;
   background: ${theme.white};
   border-radius: 5px;
