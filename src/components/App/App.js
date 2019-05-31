@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GlobalStyle from '../../assets/styles/GlobalStyle';
 import styled from 'styled-components';
+import vhCheck from 'vh-check';
 import * as coinPaprika from '../../api/coinPaprika';
 import Home from '../../pages/Home';
 import CoinList from '../../pages/CoinList';
@@ -21,6 +22,7 @@ const Wrapper = styled.div`
 const Container = styled.div`
     position: relative;
     min-height: 100vh;
+    min-height: calc(100vh - var(--vh-offset, 0px));
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -74,9 +76,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    if(window !== undefined) {
-      document.body.height = window.innerHeight;
-    }
+    //eslint-disable-next-line
+    var vhTest = vhCheck();
     
     coinPaprika.getCoins().then(res => {
         const coins = res.data.sort((a,b) => (a.rank > b.rank) ? 1 : -1).slice(0,100);

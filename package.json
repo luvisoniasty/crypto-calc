@@ -14,7 +14,8 @@
     "react-router-prop-types": "^1.0.4",
     "react-scripts": "3.0.0",
     "request-promise": "^4.2.4",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "vh-check": "^2.0.5"
   },
   "scripts": {
     "predeploy": "npm run build",
