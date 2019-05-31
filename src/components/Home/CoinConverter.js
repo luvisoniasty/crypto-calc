@@ -9,13 +9,13 @@ const StyledConverter = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 700px;
+  margin-top: 25%;
   margin-bottom: 100px;
   padding: 10px 15px;
   background: ${theme.white};
   border-radius: 5px;
   @media (min-width: 1024px) {
     padding: 20px 30px;
-    margin-top: 20%;
   }
 `;
 

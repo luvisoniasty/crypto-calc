@@ -74,6 +74,10 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    if(window !== undefined) {
+      document.body.height = window.innerHeight;
+    }
+    
     coinPaprika.getCoins().then(res => {
         const coins = res.data.sort((a,b) => (a.rank > b.rank) ? 1 : -1).slice(0,100);
         this.setState({coins});
