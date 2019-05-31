@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/crypto-calc/static/js/main.fde6f51b.chunk.js",
-    "main.js.map": "/crypto-calc/static/js/main.fde6f51b.chunk.js.map",
+    "main.js": "/crypto-calc/static/js/main.b9480f02.chunk.js",
+    "main.js.map": "/crypto-calc/static/js/main.b9480f02.chunk.js.map",
     "runtime~main.js": "/crypto-calc/static/js/runtime~main.fee3e68f.js",
     "runtime~main.js.map": "/crypto-calc/static/js/runtime~main.fee3e68f.js.map",
-    "static/js/2.4827c0d9.chunk.js": "/crypto-calc/static/js/2.4827c0d9.chunk.js",
-    "static/js/2.4827c0d9.chunk.js.map": "/crypto-calc/static/js/2.4827c0d9.chunk.js.map",
+    "static/js/2.dd29d0ec.chunk.js": "/crypto-calc/static/js/2.dd29d0ec.chunk.js",
+    "static/js/2.dd29d0ec.chunk.js.map": "/crypto-calc/static/js/2.dd29d0ec.chunk.js.map",
     "index.html": "/crypto-calc/index.html",
-    "precache-manifest.088a60051c53323318ff64e4daec9c06.js": "/crypto-calc/precache-manifest.088a60051c53323318ff64e4daec9c06.js",
+    "precache-manifest.0f155d82400abd4978ee6c17d106d9db.js": "/crypto-calc/precache-manifest.0f155d82400abd4978ee6c17d106d9db.js",
     "service-worker.js": "/crypto-calc/service-worker.js",
     "static/media/background.webp": "/crypto-calc/static/media/background.93363dd2.webp"
   }
