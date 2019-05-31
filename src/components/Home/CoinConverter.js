@@ -9,12 +9,12 @@ const StyledConverter = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 700px;
-  margin-top: 25%;
-  margin-bottom: 100px;
+  margin: 50px 0 80px 0;
   padding: 10px 15px;
   background: ${theme.white};
   border-radius: 5px;
   @media (min-width: 1024px) {
+    margin-top: 20%;
     padding: 20px 30px;
   }
 `;
